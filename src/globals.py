@@ -57,9 +57,9 @@ logger.setLevel(logging.DEBUG)
 formatter = logging.Formatter(
     "%(asctime)s :: %(levelname)s :: %(message)s", "%H:%M:%S")
 # logger to file
-if os.path.exists("./logs/game.log"):
-    os.remove("./logs/game.log")
-file_handler = RotatingFileHandler('./logs/game.log', 'a', 1000000, 1)
+# if os.path.exists("./logs/game.log"):
+#     os.remove("./logs/game.log")
+file_handler = RotatingFileHandler('./logs/game.log', 'a', 100000000, 0)
 file_handler.setLevel(logging.DEBUG)
 file_handler.setFormatter(formatter)
 logger.addHandler(file_handler)

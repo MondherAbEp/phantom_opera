@@ -6,6 +6,7 @@ from src.Character import Character
 from src.Player import Player
 from src.globals import logger, passages, colors
 
+GLOBAL_WINS = 0
 
 class Game:
     """
@@ -192,6 +193,7 @@ class Game:
                 "----------\n---- inspector wins : fantom is " + str(
                     self.fantom))
         else:
+            GLOBAL_WINS = 1
             logger.info("----------\n---- fantom wins")
         # log
         logger.info(
